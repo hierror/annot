@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "prettier": "^2.8.7"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.233",
+    "typescript": "^5.0.4"
+  }
+}
