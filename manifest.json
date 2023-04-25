@@ -1,14 +1,11 @@
 {
   "manifest_version": 3,
-  "name": "Hello Extensions",
-  "description": "Base Level Extension",
+  "name": "annot",
+  "description": "make easy annotations in the browser",
   "version": "1.0",
   "action": {
     "default_popup": "src/popup.html",
-    "default_icon": "src/hello_world.png"
-  },
-  "background": {
-    "service_worker": "src/background.js"
+    "default_icon": "public/hello_world.png"
   },
   "permissions": ["tabs"]
 }

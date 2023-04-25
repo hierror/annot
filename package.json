@@ -1,9 +1,19 @@
 {
+  "license": "MIT",
   "dependencies": {
+    "idb": "^7.1.1",
     "prettier": "^2.8.7"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.233",
-    "typescript": "^5.0.4"
+    "rimraf": "^5.0.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "webpack": "^5.80.0",
+    "webpack-cli": "^5.0.2"
+  },
+  "scripts": {
+    "build": "yarn clean & npx tsc",
+    "clean": "rimraf dist/"
   }
 }
