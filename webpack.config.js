@@ -1,8 +1,10 @@
 const path = require('path')
 
 module.exports = {
-  mode: 'development',
-  entry: './src/tooltip.js',
+  mode: 'production',
+  entry: {
+    tooltip: './src/scripts/toolbar.js',
+  },
   module: {
     rules: [
       {
@@ -15,7 +17,7 @@ module.exports = {
     extensions: ['.ts', '.js'],
   },
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'build'),
   },
 }
