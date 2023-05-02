@@ -1,4 +1,5 @@
 import * as idb from 'idb'
+import { Configurations, Contents, Pages, Visits } from '../models'
 
 type DatabaseProperties = {
   name: string
@@ -8,9 +9,10 @@ type DatabaseProperties = {
 const open = async ({ name, version = 1 }: DatabaseProperties) => {
   return idb.openDB(name, version, {
     upgrade(db) {
-      console.log('aqui ele fez')
-
-      db.createObjectStore('locations', { autoIncrement: true })
+      Visits.setup(db)
+      Pages.setup(db)
+      Contents.setup(db)
+      Configurations.setup(db)
     },
   })
 }
